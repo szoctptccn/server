@@ -67,10 +67,10 @@
 				<div class="userPopoverMenuWrapper">
 					<button
 						v-click-outside="hideMenu"
-						class="icon icon-more"
-						:aria-label="t('settings', 'Action menu')"
+						class="icon-more"
+						:aria-label="t('settings', 'Toggle user actions menu')"
 						@click.prevent="$emit('toggleMenu')" />
-					<div class="popovermenu" :class="{ 'open': openedMenu }">
+					<div class="popovermenu" :class="{ 'open': openedMenu }" :aria-expanded="openedMenu">
 						<PopoverMenu :menu="userActions" />
 					</div>
 				</div>
